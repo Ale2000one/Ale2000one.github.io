@@ -1,5 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Ale No.1</title><link>https://Ale2000one.github.io</link><description>所思所忆 随想随记</description><copyright>Ale No.1</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Ale2000one.github.io</link></image><lastBuildDate>Thu, 23 Apr 2026 06:03:57 +0000</lastBuildDate><managingEditor>Ale No.1</managingEditor><ttl>60</ttl><webMaster>Ale No.1</webMaster><item><title>模块二_第10节_执行与萃取E</title><link>https://Ale2000one.github.io/post/mo-kuai-er-_-di-10-jie-_-zhi-xing-yu-cui-qu-E.html</link><description># 第10节：执行与萃取(E)——做，然后把经验变成知识
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Ale No.1</title><link>https://Ale2000one.github.io</link><description>所思所忆 随想随记</description><copyright>Ale No.1</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Ale2000one.github.io</link></image><lastBuildDate>Thu, 23 Apr 2026 06:18:37 +0000</lastBuildDate><managingEditor>Ale No.1</managingEditor><ttl>60</ttl><webMaster>Ale No.1</webMaster><item><title>模块二_第11节_用LLM辅助萃取</title><link>https://Ale2000one.github.io/post/mo-kuai-er-_-di-11-jie-_-yong-LLM-fu-zhu-cui-qu.html</link><description># 第11节：用LLM辅助萃取——让AI帮你从经验中提炼精髓
+
+&gt; 模块二：RIDE循环拆解与实战
+
+---
+
+## 本节目标
+
+本节课程结束后，你将能够：
+
+1. **理解**为什么萃取需要AI辅助
+2. **掌握**四种AI萃取Prompt模式及其适用场景
+3. **识别**AI萃取的局限性
+4. **应用**萃取成果的迭代方法
+5. **使用**配套PDF中的模板完成一次完整的AI辅助萃取
+
+---
+
+## 开场：为什么萃取需要AI辅助
+
+在上一节中，我们学习了如何进行执行与萃取——通过实践和复盘，把学到的知识转化为可复用的经验。</description><guid isPermaLink="true">https://Ale2000one.github.io/post/mo-kuai-er-_-di-11-jie-_-yong-LLM-fu-zhu-cui-qu.html</guid><pubDate>Thu, 23 Apr 2026 06:18:05 +0000</pubDate></item><item><title>模块二_第10节_执行与萃取E</title><link>https://Ale2000one.github.io/post/mo-kuai-er-_-di-10-jie-_-zhi-xing-yu-cui-qu-E.html</link><description># 第10节：执行与萃取(E)——做，然后把经验变成知识
 
 &gt; 模块二：RIDE循环拆解与实战
 
