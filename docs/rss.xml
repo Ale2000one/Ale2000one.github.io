@@ -1,5 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Ale No.1</title><link>https://Ale2000one.github.io</link><description>所思所忆 随想随记</description><copyright>Ale No.1</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Ale2000one.github.io</link></image><lastBuildDate>Thu, 23 Apr 2026 02:32:13 +0000</lastBuildDate><managingEditor>Ale No.1</managingEditor><ttl>60</ttl><webMaster>Ale No.1</webMaster><item><title>模块二_第4节_侦察R</title><link>https://Ale2000one.github.io/post/mo-kuai-er-_-di-4-jie-_-zhen-cha-R.html</link><description># 第4节：侦察(R)——如何在几小时内看清一个陌生领域的全貌
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Ale No.1</title><link>https://Ale2000one.github.io</link><description>所思所忆 随想随记</description><copyright>Ale No.1</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Ale2000one.github.io</link></image><lastBuildDate>Thu, 23 Apr 2026 02:43:34 +0000</lastBuildDate><managingEditor>Ale No.1</managingEditor><ttl>60</ttl><webMaster>Ale No.1</webMaster><item><title>模块二_第5节_用LLM做侦察</title><link>https://Ale2000one.github.io/post/mo-kuai-er-_-di-5-jie-_-yong-LLM-zuo-zhen-cha.html</link><description># 第5节：用LLM做侦察——效率提升一个量级
+
+&gt; 模块二：RIDE循环拆解与实战
+
+---
+
+## 本节目标
+
+本节课程结束后，你将能够：
+
+1. **理解**AI为什么特别适合侦察阶段
+2. **掌握**四种AI侦察模式及其适用场景
+3. **识别**AI侦察的局限并知道如何应对
+4. **应用**AI与人工侦察的分工策略
+5. **使用**配套PDF中的Prompt模板完成一次AI侦察
+
+---
+
+## 开场：侦察的痛点与AI的机遇
+
+在上一节中，我们学习了如何用传统方法进行侦察——通过搜索引擎、百科词条、专业社区等渠道，快速了解一个陌生领域的全貌。</description><guid isPermaLink="true">https://Ale2000one.github.io/post/mo-kuai-er-_-di-5-jie-_-yong-LLM-zuo-zhen-cha.html</guid><pubDate>Thu, 23 Apr 2026 02:43:11 +0000</pubDate></item><item><title>模块二_第4节_侦察R</title><link>https://Ale2000one.github.io/post/mo-kuai-er-_-di-4-jie-_-zhen-cha-R.html</link><description># 第4节：侦察(R)——如何在几小时内看清一个陌生领域的全貌
 
 &gt; 模块二：RIDE循环拆解与实战
 
