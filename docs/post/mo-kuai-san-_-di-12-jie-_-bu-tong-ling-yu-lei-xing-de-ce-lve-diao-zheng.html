@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 第12节：不同领域类型的策略调整
+
+> 模块三：真实场景的复杂性
+
+---
+
+## 本节目标
+
+本节课程结束后，你将能够：
+
+1. **理解**不同领域类型对学习策略的影响
+2. **掌握**领域分类框架及其对应的RIDE调整策略
+3. **应用**不同领域的情境案例进行学习设计
+4. **识别**需要调整学习策略的信号
+5. **完成**针对自己学习目标的领域类型分析和策略调整
+
+---
+
+## 开场：为什么同一套方法不能应对所有领域
+
+在模块二中，我们学习了RIDE循环的完整方法论——侦察、定位、深钻、执行与萃取。">
+<meta property="og:title" content="模块三_第12节_不同领域类型的策略调整">
+<meta property="og:description" content="# 第12节：不同领域类型的策略调整
+
+> 模块三：真实场景的复杂性
+
+---
+
+## 本节目标
+
+本节课程结束后，你将能够：
+
+1. **理解**不同领域类型对学习策略的影响
+2. **掌握**领域分类框架及其对应的RIDE调整策略
+3. **应用**不同领域的情境案例进行学习设计
+4. **识别**需要调整学习策略的信号
+5. **完成**针对自己学习目标的领域类型分析和策略调整
+
+---
+
+## 开场：为什么同一套方法不能应对所有领域
+
+在模块二中，我们学习了RIDE循环的完整方法论——侦察、定位、深钻、执行与萃取。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://Ale2000one.github.io/post/mo-kuai-san-_-di-12-jie-_-bu-tong-ling-yu-lei-xing-de-ce-lve-diao-zheng.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>模块三_第12节_不同领域类型的策略调整</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">模块三_第12节_不同领域类型的策略调整</h1>
+<div class="title-right">
+    <a href="https://Ale2000one.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/Ale2000one/Ale2000one.github.io/issues/21" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>第12节：不同领域类型的策略调整</h1>
+<blockquote>
+<p>模块三：真实场景的复杂性</p>
+</blockquote>
+<hr>
+<h2>本节目标</h2>
+<p>本节课程结束后，你将能够：</p>
+<ol>
+<li><strong>理解</strong>不同领域类型对学习策略的影响</li>
+<li><strong>掌握</strong>领域分类框架及其对应的RIDE调整策略</li>
+<li><strong>应用</strong>不同领域的情境案例进行学习设计</li>
+<li><strong>识别</strong>需要调整学习策略的信号</li>
+<li><strong>完成</strong>针对自己学习目标的领域类型分析和策略调整</li>
+</ol>
+<hr>
+<h2>开场：为什么同一套方法不能应对所有领域</h2>
+<p>在模块二中，我们学习了RIDE循环的完整方法论——侦察、定位、深钻、执行与萃取。</p>
+<p>这套方法在很多场景下都有效。但你有没有想过：</p>
+<p><strong>同样的方法，在不同的学习领域，效果可能完全不同？</strong></p>
+<p>举例：</p>
+<ul>
+<li>学习编程，用RIDE方法很有效——因为编程是硬技能，有明确的对错</li>
+<li>学习沟通技巧，用同样的方法可能效果不佳——因为沟通是软技能，很难量化</li>
+</ul>
+<p>这就是模块三要解决的问题：</p>
+<p><strong>真实场景是复杂的，不同领域需要不同的学习策略。</strong></p>
+<p>本节将教你如何根据领域特点，调整RIDE循环的应用方式。</p>
+<hr>
+<h2>第一部分：领域分类框架</h2>
+<h3>1.1 为什么要分类</h3>
+<p>不同的学习领域，有不同的特点：</p>
+<ul>
+<li>有的领域有明确的"对错"，有的领域没有</li>
+<li>有的领域需要大量练习，有的领域需要深度反思</li>
+<li>有的领域可以快速见效，有的领域需要长期积累</li>
+</ul>
+<p>用同样的策略学习不同的领域，效果会大打折扣。</p>
+<p><strong>举例</strong>：</p>
+<p>你用"深钻+大量练习"的方法学习编程，效果很好。</p>
+<p>但如果用同样的方法学习"领导力"，可能会：</p>
+<ul>
+<li>练习了很多沟通技巧，但遇到真实场景还是不会用</li>
+<li>学了很多领导力理论，但不知道什么时候该用什么</li>
+<li>感觉自己"学了很多"，但实际领导能力没有提升</li>
+</ul>
+<p>这就是因为领导力属于"软技能"，和编程的"硬技能"需要不同的学习策略。</p>
+<h3>1.2 三类领域的特征</h3>
+<p>根据学习特点，领域可以分为三类：</p>
+<p><strong>第一类：硬技能领域</strong></p>
+<p><strong>典型代表</strong>：</p>
+<ul>
+<li>编程（Python、Java、JavaScript等）</li>
+<li>数据分析（SQL、Python数据分析、可视化）</li>
+<li>设计工具（Figma、Photoshop、Premiere等）</li>
+<li>外语（英语、口语、写作）</li>
+</ul>
+<p><strong>特征</strong>：</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>特征</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可验证</td>
+<td>有明确的对错，代码对不对一运行就知道</td>
+</tr>
+<tr>
+<td>有标准答案</td>
+<td>同样的问题，正确的解法通常只有一种</td>
+</tr>
+<tr>
+<td>大量练习</td>
+<td>需要反复练习才能熟练掌握</td>
+</tr>
+<tr>
+<td>技能累积</td>
+<td>技能可以叠加，后面的学习基于前面的基础</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p><strong>RIDE调整建议</strong>：</p>
+<ul>
+<li>侦察：了解技术栈全貌，但不用太深</li>
+<li>定位：聚焦核心语法/框架，范围可以小</li>
+<li>深钻：深度要够，要能实际应用</li>
+<li>执行：大量练习，边做边学</li>
+<li>萃取：整理操作流程和常见错误</li>
+</ul>
+<p><strong>第二类：软技能领域</strong></p>
+<p><strong>典型代表</strong>：</p>
+<ul>
+<li>沟通（表达、倾听、反馈）</li>
+<li>管理（团队管理、项目管理）</li>
+<li>领导力（激励、授权、决策）</li>
+<li>思考力（逻辑思维、结构化思维）</li>
+</ul>
+<p><strong>特征</strong>：</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>特征</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>难以量化</td>
+<td>没有明确的对错，效果难以直接衡量</td>
+</tr>
+<tr>
+<td>情境依赖</td>
+<td>同样的话，在不同场景效果完全不同</td>
+</tr>
+<tr>
+<td>需要反思</td>
+<td>需要在实践中反思、调整、迭代</td>
+</tr>
+<tr>
+<td>经验累积</td>
+<td>更多的靠经验积累，不是技能叠加</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p><strong>RIDE调整建议</strong>：</p>
+<ul>
+<li>侦察：了解基本概念和常见框架，但不用太技术化</li>
+<li>定位：定位具体情境中的问题，比定位"知识点"更重要</li>
+<li>深钻：深度适中，关键是理解原理和适用条件</li>
+<li>执行：重在实践和反思，需要真实场景的反馈</li>
+<li>萃取：多萃取情境案例和经验教训</li>
+</ul>
+<p><strong>第三类：混合领域</strong></p>
+<p><strong>典型代表</strong>：</p>
+<ul>
+<li>产品设计（需要设计技能+用户理解+商业思维）</li>
+<li>项目管理（需要流程管理+沟通协调+风险管理）</li>
+<li>内容营销（需要写作技能+数据分析+用户洞察）</li>
+<li>创业（需要产品+市场+运营+管理）</li>
+</ul>
+<p><strong>特征</strong>：</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>特征</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>软硬兼备</td>
+<td>既有可以验证的硬技能，也有难以量化的软技能</td>
+</tr>
+<tr>
+<td>交替进行</td>
+<td>需要在不同类型的能力之间切换</td>
+</tr>
+<tr>
+<td>动态平衡</td>
+<td>不同时期需要不同的侧重点</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p><strong>RIDE调整建议</strong>：</p>
+<ul>
+<li>侦察：了解全貌，但认识到领域的多面性</li>
+<li>定位：先定位"类型"，再定位"具体点"（是硬技能问题还是软技能问题）</li>
+<li>深钻：根据类型调整深度，灵活切换</li>
+<li>执行：交替进行，硬技能多练，软技能多反思</li>
+<li>萃取：分别萃取不同类型的能力，形成综合能力</li>
+</ul>
+<h3>1.3 领域分类对照表</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>维度</th>
+<th>硬技能</th>
+<th>软技能</th>
+<th>混合领域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可验证性</td>
+<td>高</td>
+<td>低</td>
+<td>中</td>
+</tr>
+<tr>
+<td>标准答案</td>
+<td>有</td>
+<td>无</td>
+<td>部分有</td>
+</tr>
+<tr>
+<td>学习方式</td>
+<td>多练</td>
+<td>多反思</td>
+<td>交替</td>
+</tr>
+<tr>
+<td>衡量标准</td>
+<td>对错</td>
+<td>效果</td>
+<td>组合</td>
+</tr>
+<tr>
+<td>RIDE侧重</td>
+<td>深钻+执行</td>
+<td>定位+萃取</td>
+<td>动态平衡</td>
+</tr>
+<tr>
+<td>典型领域</td>
+<td>编程、设计工具、数据分析</td>
+<td>沟通、管理、领导力</td>
+<td>产品设计、项目管理</td>
+</tr>
+<tr>
+<td>AI辅助价值</td>
+<td>高（练习题、代码检查）</td>
+<td>中（案例分析、反思引导）</td>
+<td>高（多场景支持）</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<hr>
+<h2>第二部分：不同领域的情境案例</h2>
+<h3>2.1 案例一：编程（硬技能领域）</h3>
+<p><strong>背景</strong>：</p>
+<p>小张是一名产品经理，想学Python来自动化处理日常数据工作。</p>
+<p><strong>领域类型</strong>：硬技能</p>
+<p><strong>RIDE调整策略</strong>：</p>
+<p><strong>侦察阶段</strong>：</p>
+<ul>
+<li>目标：了解Python能做什么，数据处理相关的库有哪些</li>
+<li>深度：快速概览，不用深入原理</li>
+<li>重点：找到"数据处理"相关的技术栈</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">侦察产出：
+- Python基础语法
+- pandas（数据处理）
+- matplotlib/seaborn（可视化）
+- 学习路径：基础 → pandas → 实践项目
+</code></pre>
+<p><strong>定位阶段</strong>：</p>
+<ul>
+<li>定位"不解决就不动"的卡点</li>
+<li>他的核心需求是"处理Excel数据"</li>
+<li>关键卡点：pandas数据读写 + 基础数据操作</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">定位结果：
+- 必须懂：pandas读写Excel、数据筛选和汇总
+- 可以后学：数据清洗、可视化、复杂统计
+- 关键瓶颈：pandas基础操作
+</code></pre>
+<p><strong>深钻阶段</strong>：</p>
+<ul>
+<li>范围窄而深：只深钻pandas的"读写"和"基础操作"</li>
+<li>目标：能独立处理自己的Excel数据</li>
+<li>方法：边做边学，做实际任务</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">深钻目标：
+- 能用pandas读取和保存Excel文件
+- 能进行数据筛选、汇总、合并
+- 能独立完成一次数据处理任务
+</code></pre>
+<p><strong>执行阶段</strong>：</p>
+<ul>
+<li>找到自己的实际数据处理任务</li>
+<li>边做边查，遇到问题解决问题</li>
+<li>记录遇到的错误和解决方法</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">执行任务：
+把每月的销售数据Excel文件，用pandas自动处理，生成汇总报表
+</code></pre>
+<p><strong>萃取阶段</strong>：</p>
+<ul>
+<li>整理常用的操作代码</li>
+<li>记录常见错误和排查方法</li>
+<li>形成可复用的代码模板</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">萃取成果：
+- pandas常用操作速查表
+- 数据处理代码模板
+- 常见错误及解决方法
+</code></pre>
+<h3>2.2 案例二：管理（软技能领域）</h3>
+<p><strong>背景</strong>：</p>
+<p>小李是一名刚晋升的团队管理者，想学习如何有效管理团队。</p>
+<p><strong>领域类型</strong>：软技能</p>
+<p><strong>RIDE调整策略</strong>：</p>
+<p><strong>侦察阶段</strong>：</p>
+<ul>
+<li>目标：了解"团队管理"包含哪些方面，常见的方法论有哪些</li>
+<li>深度：了解基本概念，不用深入技术细节</li>
+<li>重点：建立对管理全貌的认知</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">侦察产出：
+- 管理者角色认知
+- 团队沟通与协作
+- 目标管理与绩效
+- 员工激励与反馈
+- 学习路径：角色认知 → 沟通 → 目标 → 激励
+</code></pre>
+<p><strong>定位阶段</strong>：</p>
+<ul>
+<li>定位具体情境中的问题</li>
+<li>他的核心困惑是"如何给团队成员有效的反馈"</li>
+<li>关键卡点：不是"反馈技巧"，而是"不知道什么时候、怎么反馈"</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">定位结果：
+- 不是学"反馈技巧"，而是解决"什么情况下该反馈、反馈什么"
+- 先搞清楚反馈的情境和时机，再学具体技巧
+</code></pre>
+<p><strong>深钻阶段</strong>：</p>
+<ul>
+<li>深度适中，关键是理解原理和适用条件</li>
+<li>不是"记住技巧"，而是"理解什么情况下用什么方法"</li>
+<li>方法：多看案例，多反思</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">深钻目标：
+- 理解有效反馈的关键要素（及时、具体、建设性）
+- 能识别需要反馈的情境
+- 能给出一次有效的反馈（不追求完美，先做到一次）
+</code></pre>
+<p><strong>执行阶段</strong>：</p>
+<ul>
+<li>在真实的管理情境中实践</li>
+<li>每次反馈后反思：效果如何？有什么可以改进？</li>
+<li>寻求团队成员的反馈</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">执行任务：
+在接下来一周内，给每位团队成员至少一次正式反馈，并记录反馈内容和效果
+</code></pre>
+<p><strong>萃取阶段</strong>：</p>
+<ul>
+<li>萃取的是"情境案例"和"经验教训"</li>
+<li>不是"标准流程"，而是"不同情境的处理方式"</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">萃取成果：
+- 反馈情境案例库（什么情况下反馈了什么、效果如何）
+- 反馈效果复盘记录
+- 下次可以改进的地方
+</code></pre>
+<h3>2.3 案例三：产品设计（混合领域）</h3>
+<p><strong>背景</strong>：</p>
+<p>小王是一名开发，想转型做产品经理，学习产品设计能力。</p>
+<p><strong>领域类型</strong>：混合领域</p>
+<p><strong>RIDE调整策略</strong>：</p>
+<p><strong>侦察阶段</strong>：</p>
+<ul>
+<li>目标：了解产品设计包含哪些能力，哪些是硬技能、哪些是软技能</li>
+<li>深度：建立全貌认知</li>
+<li>重点：识别不同类型的技能</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">侦察产出：
+- 硬技能：需求文档撰写、原型设计、数据分析
+- 软技能：用户洞察、需求判断、沟通协调
+- 学习路径：根据类型分别学习
+</code></pre>
+<p><strong>定位阶段</strong>：</p>
+<ul>
+<li>先定位"类型"，再定位"具体点"</li>
+<li>他现在最卡的是"不知道用户真正要什么"</li>
+<li>这是软技能问题：用户洞察能力</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">定位结果：
+- 类型：软技能（用户洞察）
+- 具体卡点：不知道如何挖掘用户的真实需求
+- 不是学"用户研究方法"，而是解决"如何理解用户"
+</code></pre>
+<p><strong>深钻阶段</strong>：</p>
+<ul>
+<li>根据类型调整深度</li>
+<li>软技能：理解原理和适用条件，不用死记硬背</li>
+<li>硬技能：需要练习，边做边学</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">深钻计划：
+- 软技能（用户洞察）：理解用户需求的底层逻辑，了解常见方法
+- 硬技能（原型设计）：练习Figma基本操作，能画简单原型
+</code></pre>
+<p><strong>执行阶段</strong>：</p>
+<ul>
+<li>交替进行，软硬结合</li>
+<li>用硬技能（原型）来实践软技能（用户洞察）</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">执行任务：
+为一个真实的小功能，做一次用户访谈，画出原型，并验证方案
+</code></pre>
+<p><strong>萃取阶段</strong>：</p>
+<ul>
+<li>分别萃取不同类型的能力</li>
+<li>整合成综合的产品设计能力</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">萃取成果：
+- 用户访谈技巧（软）
+- 原型设计规范（硬）
+- 产品设计流程（综合）
+</code></pre>
+<hr>
+<h2>第三部分：调整的信号</h2>
+<h3>3.1 什么时候需要调整</h3>
+<p>你的学习进展可能会出现一些问题，说明你需要调整学习策略。</p>
+<p><strong>信号一：学习进展缓慢</strong></p>
+<p>表现：</p>
+<ul>
+<li>花了很长时间，但感觉没有实质性进展</li>
+<li>学了很多内容，但无法实际应用</li>
+</ul>
+<p>可能原因：</p>
+<ul>
+<li>侦察不够，对领域认知不足</li>
+<li>定位不准，学的东西不是真正需要的</li>
+</ul>
+<p>调整方向：</p>
+<ul>
+<li>回到侦察，补全领域认知</li>
+<li>重新定位，找准关键卡点</li>
+</ul>
+<p><strong>信号二：感觉"学了很多，但用不上"</strong></p>
+<p>表现：</p>
+<ul>
+<li>知识知道很多，但遇到实际问题还是不知道怎么用</li>
+<li>学的时候觉得懂了，实际操作时又不会</li>
+</ul>
+<p>可能原因：</p>
+<ul>
+<li>深钻不够，没有形成真正的应用能力</li>
+<li>执行不够，没有把知识转化为技能</li>
+</ul>
+<p>调整方向：</p>
+<ul>
+<li>加大执行力度，边做边学</li>
+<li>调整深钻深度，确保学的东西能实际应用</li>
+</ul>
+<p><strong>信号三：反复在同一个地方卡住</strong></p>
+<p>表现：</p>
+<ul>
+<li>每次学习都在同一个环节卡住</li>
+<li>同样的问题反复出现</li>
+</ul>
+<p>可能原因：</p>
+<ul>
+<li>卡点没真正解决，需要更深入的深钻</li>
+<li>可能是软技能问题，需要不同的学习方法</li>
+</ul>
+<p>调整方向：</p>
+<ul>
+<li>分析卡住的原因，是硬技能问题还是软技能问题</li>
+<li>如果是软技能问题，改变学习方法（多反思、多实践）</li>
+</ul>
+<h3>3.2 信号与调整对照表</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>信号</th>
+<th>可能原因</th>
+<th>调整方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>学习进展缓慢</td>
+<td>侦察不够</td>
+<td>回到侦察，补全认知</td>
+</tr>
+<tr>
+<td>感觉学了很多用不上</td>
+<td>定位不准/深钻不够</td>
+<td>重新定位/加强深钻</td>
+</tr>
+<tr>
+<td>反复在同一个地方卡住</td>
+<td>卡点没解决/方法不对</td>
+<td>深入深钻/改变方法</td>
+</tr>
+<tr>
+<td>硬技能学不好</td>
+<td>练习不够</td>
+<td>增加练习时间</td>
+</tr>
+<tr>
+<td>软技能学不好</td>
+<td>反思不够/情境不足</td>
+<td>多反思/找真实场景</td>
+</tr>
+<tr>
+<td>混合领域学不好</td>
+<td>类型混淆</td>
+<td>先分类再针对性学习</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<hr>
+<h2>第四部分：常见调整策略</h2>
+<h3>4.1 策略一：侦察太浅 → 回到侦察</h3>
+<p><strong>症状</strong>：</p>
+<ul>
+<li>学习过程中发现"不知道自己不知道什么"</li>
+<li>学的知识和实际需要的不匹配</li>
+<li>对领域全貌没有清晰认知</li>
+</ul>
+<p><strong>调整方法</strong>：</p>
+<ol>
+<li><strong>暂停当前学习</strong></li>
+<li><strong>回到侦察阶段，重新了解领域全貌</strong></li>
+<li><strong>重点关注</strong>：核心概念、应用场景、学习路径</li>
+<li><strong>更新初始地图</strong></li>
+</ol>
+<p><strong>示例</strong>：</p>
+<p>小周学数据分析，学了2周SQL，发现不知道怎么和业务结合。</p>
+<p>调整：回到侦察，了解"数据分析在业务中的应用场景"，再继续学习。</p>
+<h3>4.2 策略二：定位不准 → 用AI重新定位</h3>
+<p><strong>症状</strong>：</p>
+<ul>
+<li>学了很多内容，但发现不是真正需要的</li>
+<li>关键卡点没有解决，其他学了也没用</li>
+<li>不知道自己卡在哪里</li>
+</ul>
+<p><strong>调整方法</strong>：</p>
+<ol>
+<li><strong>停止盲目学习</strong></li>
+<li><strong>用第7节的AI定位方法，重新定位</strong></li>
+<li><strong>明确关键卡点</strong></li>
+<li><strong>聚焦关键卡点进行深钻</strong></li>
+</ol>
+<p><strong>示例</strong>：</p>
+<p>小刘学产品设计，学了很多工具（Figma、Axure），但发现卡在"不知道用户要什么"。</p>
+<p>调整：用AI辅助定位，发现真正卡点是"用户洞察能力"，不是工具技能。</p>
+<h3>4.3 策略三：深钻不够 → 聚焦核心点</h3>
+<p><strong>症状</strong>：</p>
+<ul>
+<li>学了很多，但每个都只学了点皮毛</li>
+<li>遇到问题还是不会，无法实际应用</li>
+<li>感觉"什么都懂，但什么都不精"</li>
+</ul>
+<p><strong>调整方法</strong>：</p>
+<ol>
+<li><strong>识别最核心的1-2个知识点</strong></li>
+<li><strong>大幅缩小学习范围</strong></li>
+<li><strong>把一个点深钻到能实际应用</strong></li>
+<li><strong>用"够用"标准衡量，不要追求完美</strong></li>
+</ol>
+<p><strong>示例</strong>：</p>
+<p>小陈学Python，学了基础语法、数据结构、函数、面向对象……但没一个学透。</p>
+<p>调整：只聚焦"数据处理"这一个点，深钻到能处理自己的Excel数据，其他以后再说。</p>
+<h3>4.4 策略四：硬技能练习不够 → 增加练习</h3>
+<p><strong>症状</strong>：</p>
+<ul>
+<li>看教程觉得懂了，但自己写就出错</li>
+<li>代码能看懂，但写不出来</li>
+<li>工具功能知道，但操作不熟练</li>
+</ul>
+<p><strong>调整方法</strong>：</p>
+<ol>
+<li><strong>减少看教程的时间，增加练习时间</strong></li>
+<li><strong>设定每天的练习任务</strong></li>
+<li><strong>用实际项目来练习</strong></li>
+<li><strong>记录和复盘练习中的错误</strong></li>
+</ol>
+<p><strong>示例</strong>：</p>
+<p>小孙学SQL，看了大量教程，但写查询还是经常出错。</p>
+<p>调整：每天用实际数据练习写3条SQL，1周后明显改善。</p>
+<h3>4.5 策略五：软技能反思不够 → 多反思多实践</h3>
+<p><strong>症状</strong>：</p>
+<ul>
+<li>学了很多沟通技巧，但实际用不上</li>
+<li>知道"应该怎么做"，但做的时候做不到</li>
+<li>感觉学了和没学一样</li>
+</ul>
+<p><strong>调整方法</strong>：</p>
+<ol>
+<li><strong>减少"学"的时间，增加"用"的时间</strong></li>
+<li><strong>每次实践后做反思复盘</strong></li>
+<li><strong>找真实场景实践，不要只在想象中练习</strong></li>
+<li><strong>把反思结果萃取成案例</strong></li>
+</ol>
+<p><strong>示例</strong>：</p>
+<p>小马学沟通，学了很多"反馈技巧"，但和团队成员沟通时还是老样子。</p>
+<p>调整：每次沟通后做3分钟反思（哪里做得好、哪里可以改进），1个月后明显改善。</p>
+<hr>
+<h2>第五部分：案例——学"数据分析"的不同路径</h2>
+<h3>5.1 背景</h3>
+<p>小周和小林都是运营，都想学"数据分析"。</p>
+<p>但他们的背景和需求不同，应该用不同的学习路径。</p>
+<h3>5.2 案例一：技术向（小周）</h3>
+<p><strong>背景</strong>：</p>
+<ul>
+<li>小周是技术出身，对代码比较熟悉</li>
+<li>他的需求是"自己提取数据自己做分析"</li>
+</ul>
+<p><strong>领域类型</strong>：偏向硬技能</p>
+<p><strong>学习路径</strong>：</p>
+<pre class="notranslate"><code class="notranslate">侦察：了解数据分析的技术栈（SQL → Python → 可视化）
+
+定位：
+- 核心需求：自己从数据库提取数据
+- 关键卡点：SQL查询
+- 其他：可以后学
+
+深钻：
+- 聚焦SQL，先把SQL学透
+- 能独立完成数据提取
+
+执行：
+- 实际工作中提取需要的各种数据
+- 边做边学，补充其他技能
+
+萃取：
+- SQL常用语句速查
+- 数据提取代码模板
+</code></pre>
+<h3>5.3 案例二：业务向（小林）</h3>
+<p><strong>背景</strong>：</p>
+<ul>
+<li>小林是运营出身，对业务比较熟悉</li>
+<li>他的需求是"理解数据背后的业务含义"</li>
+</ul>
+<p><strong>领域类型</strong>：偏向软技能+混合</p>
+<p><strong>学习路径</strong>：</p>
+<pre class="notranslate"><code class="notranslate">侦察：了解"数据分析"在运营中的应用场景
+
+定位：
+- 核心需求：理解业务数据背后的含义
+- 关键卡点：业务指标定义、数据归因
+- 其他：SQL可以学基础，但不用精通
+
+深钻：
+- 聚焦业务理解：什么算好、什么算差、如何归因
+- 理解分析方法，但不用自己写代码
+
+执行：
+- 分析自己负责的业务数据
+- 和数据分析师沟通，理解数据含义
+- 边做边学，补充SQL技能
+
+萃取：
+- 业务数据分析案例
+- 常见的数据分析场景和方法
+</code></pre>
+<h3>5.4 两种路径的对比</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>维度</th>
+<th>技术向（小周）</th>
+<th>业务向（小林）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>侦察重点</td>
+<td>技术栈全貌</td>
+<td>应用场景全貌</td>
+</tr>
+<tr>
+<td>定位卡点</td>
+<td>SQL查询能力</td>
+<td>业务理解能力</td>
+</tr>
+<tr>
+<td>深钻方向</td>
+<td>技术深度</td>
+<td>理解深度</td>
+</tr>
+<tr>
+<td>执行方式</td>
+<td>自己写代码</td>
+<td>用工具+沟通</td>
+</tr>
+<tr>
+<td>萃取成果</td>
+<td>代码模板</td>
+<td>分析案例</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p><strong>关键洞察</strong>：</p>
+<p>同样是学"数据分析"，因为背景和需求不同，学习路径完全不同。</p>
+<p>技术向要深钻技术，业务向要深钻业务理解。</p>
+<p>不能用同样的方法学同样的内容。</p>
+<hr>
+<h2>第六部分：本节总结</h2>
+<h3>核心要点回顾</h3>
+<ol>
+<li>
+<p><strong>领域分类框架</strong>：</p>
+<ul>
+<li>硬技能：可验证、有标准答案、需要大量练习</li>
+<li>软技能：难以量化、情境依赖、需要反思</li>
+<li>混合领域：软硬兼备、交替进行、动态平衡</li>
+</ul>
+</li>
+<li>
+<p><strong>不同领域的RIDE调整</strong>：</p>
+<ul>
+<li>硬技能：更多深钻，更多执行</li>
+<li>软技能：更多定位（情境），更多萃取（反思）</li>
+<li>混合领域：动态平衡，根据类型灵活切换</li>
+</ul>
+</li>
+<li>
+<p><strong>需要调整的信号</strong>：</p>
+<ul>
+<li>学习进展缓慢 → 回到侦察</li>
+<li>学了很多用不上 → 重新定位/加强深钻</li>
+<li>反复卡住 → 深入深钻/改变方法</li>
+</ul>
+</li>
+<li>
+<p><strong>常见调整策略</strong>：</p>
+<ul>
+<li>侦察太浅 → 回到侦察</li>
+<li>定位不准 → 用AI重新定位</li>
+<li>深钻不够 → 聚焦核心点</li>
+<li>硬技能练习不够 → 增加练习</li>
+<li>软技能反思不够 → 多反思多实践</li>
+</ul>
+</li>
+</ol>
+<h3>关键认知</h3>
+<blockquote>
+<p><strong>不同领域需要不同的学习策略。</strong></p>
+<p>用同一套方法学所有内容，效果会大打折扣。</p>
+<p>先识别领域类型，再选择对应的RIDE调整策略，是高效学习的关键。</p>
+</blockquote>
+<hr>
+<h2>第七部分：课后练习</h2>
+<h3>练习一：分析你的学习目标</h3>
+<p><strong>任务</strong>：</p>
+<p>分析你在第3节设定的学习目标，判断它属于哪个领域类型。</p>
+<p><strong>格式</strong>：</p>
+<pre class="notranslate"><code class="notranslate">【学习目标】
+[描述你的学习目标]
+
+【领域类型】
+□ 硬技能（编程、设计工具、数据分析）
+□ 软技能（沟通、管理、领导力）
+□ 混合领域（产品设计、项目管理、内容营销）
+
+【判断理由】
+[说明为什么属于这个类型]
+</code></pre>
+<hr>
+<h3>练习二：调整你的RIDE策略</h3>
+<p><strong>任务</strong>：</p>
+<p>基于你的领域类型分析，调整你的RIDE学习策略。</p>
+<p><strong>格式</strong>：</p>
+<pre class="notranslate"><code class="notranslate">【RIDE策略调整】
+
+侦察阶段：
+- 重点：
+- 深度：
+
+定位阶段：
+- 重点：
+- 卡点识别：
+
+深钻阶段：
+- 深度：
+- 方法：
+
+执行阶段：
+- 方式：
+- 练习量：
+
+萃取阶段：
+- 重点：
+- 形式：
+</code></pre>
+<hr>
+<h3>练习三：识别调整信号</h3>
+<p><strong>任务</strong>：</p>
+<p>回顾你过去的学习经历，识别是否有需要调整的情况。</p>
+<p><strong>问题清单</strong>：</p>
+<ol>
+<li>有没有学了很久但进展缓慢的经历？</li>
+<li>有没有学了很多但用不上的经历？</li>
+<li>有没有反复在同一个地方卡住的经历？</li>
+</ol>
+<p>如果有，分析一下原因，思考应该如何调整。</p>
+<hr>
+<h2>课前预告</h2>
+<p>下一节我们将进入：</p>
+<p><strong>第13节：同时学多个东西——认知资源的分配策略</strong></p>
+<p>你将学习如何在多任务学习场景下高效分配时间和精力。</p>
+<p>准备好了吗？我们下一节见。</p>
+<hr>
+<p><em>本节课程时长：约20分钟</em><br>
+<em>配套资源：无</em></p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://Ale2000one.github.io">Ale No.1</a></div>
+<div id="footer2"><span id="filingNum"><a href="https://beian.miit.gov.cn/" target="_blank"><a href="https://icp.gov.moe/?keyword=20261219" target="_blank">萌 ICP 备 20261219 号</a></a> • </span>
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("02/22/2026"!=""){
+    var startSite=new Date("02/22/2026");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","Ale2000one/Ale2000one.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+
+
+</html>

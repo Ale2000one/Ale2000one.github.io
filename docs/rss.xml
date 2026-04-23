@@ -1,5 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Ale No.1</title><link>https://Ale2000one.github.io</link><description>所思所忆 随想随记</description><copyright>Ale No.1</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Ale2000one.github.io</link></image><lastBuildDate>Thu, 23 Apr 2026 06:18:37 +0000</lastBuildDate><managingEditor>Ale No.1</managingEditor><ttl>60</ttl><webMaster>Ale No.1</webMaster><item><title>模块二_第11节_用LLM辅助萃取</title><link>https://Ale2000one.github.io/post/mo-kuai-er-_-di-11-jie-_-yong-LLM-fu-zhu-cui-qu.html</link><description># 第11节：用LLM辅助萃取——让AI帮你从经验中提炼精髓
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Ale No.1</title><link>https://Ale2000one.github.io</link><description>所思所忆 随想随记</description><copyright>Ale No.1</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Ale2000one.github.io</link></image><lastBuildDate>Thu, 23 Apr 2026 06:19:22 +0000</lastBuildDate><managingEditor>Ale No.1</managingEditor><ttl>60</ttl><webMaster>Ale No.1</webMaster><item><title>模块三_第12节_不同领域类型的策略调整</title><link>https://Ale2000one.github.io/post/mo-kuai-san-_-di-12-jie-_-bu-tong-ling-yu-lei-xing-de-ce-lve-diao-zheng.html</link><description># 第12节：不同领域类型的策略调整
+
+&gt; 模块三：真实场景的复杂性
+
+---
+
+## 本节目标
+
+本节课程结束后，你将能够：
+
+1. **理解**不同领域类型对学习策略的影响
+2. **掌握**领域分类框架及其对应的RIDE调整策略
+3. **应用**不同领域的情境案例进行学习设计
+4. **识别**需要调整学习策略的信号
+5. **完成**针对自己学习目标的领域类型分析和策略调整
+
+---
+
+## 开场：为什么同一套方法不能应对所有领域
+
+在模块二中，我们学习了RIDE循环的完整方法论——侦察、定位、深钻、执行与萃取。</description><guid isPermaLink="true">https://Ale2000one.github.io/post/mo-kuai-san-_-di-12-jie-_-bu-tong-ling-yu-lei-xing-de-ce-lve-diao-zheng.html</guid><pubDate>Thu, 23 Apr 2026 06:18:55 +0000</pubDate></item><item><title>模块二_第11节_用LLM辅助萃取</title><link>https://Ale2000one.github.io/post/mo-kuai-er-_-di-11-jie-_-yong-LLM-fu-zhu-cui-qu.html</link><description># 第11节：用LLM辅助萃取——让AI帮你从经验中提炼精髓
 
 &gt; 模块二：RIDE循环拆解与实战
 
