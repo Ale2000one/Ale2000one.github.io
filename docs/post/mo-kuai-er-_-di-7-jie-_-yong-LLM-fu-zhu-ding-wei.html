@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://blog.meekdai.com/avatar.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 第7节：用LLM辅助定位——让AI帮你看到盲区
+
+> 模块二：RIDE循环拆解与实战
+
+---
+
+## 本节目标
+
+本节课程结束后，你将能够：
+
+1. **理解**AI辅助定位的独特价值
+2. **掌握**四种定位Prompt技巧
+3. **应用**追问、验证、交叉的对话艺术
+4. **识别**定位结果的验证方法
+5. **使用**配套PDF中的模板完成一次完整的AI辅助定位
+
+---
+
+## 开场：为什么定位需要AI辅助
+
+在上一节中，我们学习了如何通过'三层定位'框架找到学习的关键卡点。">
+<meta property="og:title" content="模块二_第7节_用LLM辅助定位">
+<meta property="og:description" content="# 第7节：用LLM辅助定位——让AI帮你看到盲区
+
+> 模块二：RIDE循环拆解与实战
+
+---
+
+## 本节目标
+
+本节课程结束后，你将能够：
+
+1. **理解**AI辅助定位的独特价值
+2. **掌握**四种定位Prompt技巧
+3. **应用**追问、验证、交叉的对话艺术
+4. **识别**定位结果的验证方法
+5. **使用**配套PDF中的模板完成一次完整的AI辅助定位
+
+---
+
+## 开场：为什么定位需要AI辅助
+
+在上一节中，我们学习了如何通过'三层定位'框架找到学习的关键卡点。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://Ale2000one.github.io/post/mo-kuai-er-_-di-7-jie-_-yong-LLM-fu-zhu-ding-wei.html">
+<meta property="og:image" content="https://blog.meekdai.com/avatar.svg">
+<title>模块二_第7节_用LLM辅助定位</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">模块二_第7节_用LLM辅助定位</h1>
+<div class="title-right">
+    <a href="https://Ale2000one.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/Ale2000one/Ale2000one.github.io/issues/16" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>第7节：用LLM辅助定位——让AI帮你看到盲区</h1>
+<blockquote>
+<p>模块二：RIDE循环拆解与实战</p>
+</blockquote>
+<hr>
+<h2>本节目标</h2>
+<p>本节课程结束后，你将能够：</p>
+<ol>
+<li><strong>理解</strong>AI辅助定位的独特价值</li>
+<li><strong>掌握</strong>四种定位Prompt技巧</li>
+<li><strong>应用</strong>追问、验证、交叉的对话艺术</li>
+<li><strong>识别</strong>定位结果的验证方法</li>
+<li><strong>使用</strong>配套PDF中的模板完成一次完整的AI辅助定位</li>
+</ol>
+<hr>
+<h2>开场：为什么定位需要AI辅助</h2>
+<p>在上一节中，我们学习了如何通过"三层定位"框架找到学习的关键卡点。</p>
+<p>但有一个问题始终存在：<strong>你可能不知道自己不知道什么</strong>。</p>
+<p>这是一个著名的认知陷阱——"不知道自己不知道"（Unknown Unknowns）。</p>
+<p><strong>举例</strong>：</p>
+<p>一个产品经理想学数据分析，她可能会定位为：</p>
+<ul>
+<li>"我需要学SQL"</li>
+<li>"我需要学Python"</li>
+<li>"我需要学数据可视化"</li>
+</ul>
+<p>但实际上，她真正卡住的是"不知道该分析什么"——她不懂业务指标的定义，不知道哪些数据是关键。</p>
+<p>这个盲区，她自己很难发现。</p>
+<p><strong>AI辅助定位的价值</strong>：</p>
+<p>AI可以帮助你跳出自己的视角，用"专家视角"审视你的定位：</p>
+<ul>
+<li>AI可以帮你发现"你不知道自己不知道"的地方</li>
+<li>AI可以模拟专家视角，指出关键卡点</li>
+<li>AI可以从多个角度分析你的问题，提供多元化的定位方案</li>
+</ul>
+<p>本节将教你如何利用AI进行精准定位。</p>
+<hr>
+<h2>第一部分：AI辅助定位的价值</h2>
+<h3>1.1 AI能帮你做什么</h3>
+<p><strong>价值一：识别"不知道自己不知道"的领域</strong></p>
+<p>AI基于其训练过程中学到的大量知识，能够识别出你在某个领域可能存在的盲区。</p>
+<p>当你描述你的问题时，AI可能会指出：</p>
+<ul>
+<li>"你提到了X，但你可能还需要了解Y"</li>
+<li>"你关注了表层问题，但更核心的可能是Z"</li>
+<li>"这个问题背后有一个你可能没考虑到的概念"</li>
+</ul>
+<p>这些提示，能帮你发现自己忽视的盲区。</p>
+<p><strong>价值二：模拟专家视角，发现关键点</strong></p>
+<p>AI可以扮演不同领域的专家角色，用专家的视角审视你的问题。</p>
+<p>专家和普通人的区别在于：</p>
+<ul>
+<li>专家知道什么是核心，什么是边缘</li>
+<li>专家知道新手常犯的错误是什么</li>
+<li>专家知道从哪里切入最容易突破</li>
+</ul>
+<p>通过AI模拟专家视角，你可以获得专家级的定位建议。</p>
+<p><strong>价值三：提供多种定位方案的对比</strong></p>
+<p>AI可以针对同一个问题，提供多种不同的定位思路。</p>
+<p>你可以：</p>
+<ul>
+<li>让AI从不同角度分析你的问题</li>
+<li>让AI给出多种可能的定位方案</li>
+<li>然后根据自己的情况，选择最合适的方案</li>
+</ul>
+<h3>1.2 AI辅助定位 vs 人工定位</h3>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>维度</th>
+<th>人工定位</th>
+<th>AI辅助定位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>视角</td>
+<td>受限于自己的认知</td>
+<td>可以模拟专家视角</td>
+</tr>
+<tr>
+<td>盲区</td>
+<td>难以发现自己的盲区</td>
+<td>能识别"不知道不知道"</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>需要自己思考推理</td>
+<td>即时响应，快速迭代</td>
+</tr>
+<tr>
+<td>深度</td>
+<td>取决于个人经验</td>
+<td>受限于AI知识库</td>
+</tr>
+<tr>
+<td>准确性</td>
+<td>依赖个人判断</td>
+<td>需要验证</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<p><strong>核心结论</strong>：</p>
+<blockquote>
+<p>AI定位是人工定位的有力补充，不是替代。</p>
+<p>用AI发现盲区，用人工最终判断。</p>
+</blockquote>
+<hr>
+<h2>第二部分：定位Prompt的四种技巧</h2>
+<h3>2.1 技巧A：问题反推</h3>
+<p><strong>核心思想</strong>：</p>
+<p>描述你遇到的问题，让AI帮你分析最可能的卡点在哪里。</p>
+<p><strong>适用场景</strong>：</p>
+<ul>
+<li>你有一个具体的困境，但不知道卡在哪里</li>
+<li>你尝试了很多方法，但效果不好</li>
+<li>你感觉"卡住了"，但说不清卡在哪里</li>
+</ul>
+<p><strong>Prompt模板</strong>：</p>
+<pre class="notranslate"><code class="notranslate">我遇到了一个学习/工作上的问题，请帮我分析最可能的卡点在哪里。
+
+【问题描述】
+[详细描述你的具体情况，包括：你在做什么、遇到了什么困难、你尝试了什么方法]
+
+【请帮我分析】
+1. 导致这个问题的核心原因可能是什么？
+2. 如果我是新手，最可能犯的错误是什么？
+3. 我可能忽视了哪些重要因素？
+
+请从多个角度分析，帮助我发现我可能没看到的问题。
+</code></pre>
+<p><strong>示例对话</strong>：</p>
+<blockquote>
+<p><strong>用户</strong>：我是一名运营，想学数据分析来优化活动效果。我学了两周Python，但感觉没什么进展，做活动效果分析还是不会。</p>
+</blockquote>
+<blockquote>
+<p><strong>AI分析</strong>：</p>
+<p>从你的描述看，问题可能不在Python本身，而在别的地方：</p>
+<ol>
+<li>
+<p><strong>定位可能偏了</strong>：你学的是Python"语法"，而不是数据分析"思维"。学两周Python语法，做数据分析还是不会，因为这两者之间的差距很大。</p>
+</li>
+<li>
+<p><strong>可能卡在业务理解</strong>：活动效果分析的前提是理解"什么算活动成功"——这叫"归因"。如果你不懂归因逻辑，学再多工具也没用。</p>
+</li>
+<li>
+<p><strong>可能缺少数据基础</strong>：Python只是工具，你还需要知道去哪里找数据、数据的结构是什么。</p>
+</li>
+</ol>
+<p><strong>建议</strong>：与其继续学Python，不如先问自己两个问题：</p>
+<ul>
+<li>"活动效果怎么看？"（业务理解）</li>
+<li>"活动数据存在哪里？"（数据基础）</li>
+</ul>
+<p>把这两个问题搞清楚，再决定要不要学Python、学什么程度的Python。</p>
+</blockquote>
+<h3>2.2 技巧B：专家视角</h3>
+<p><strong>核心思想</strong>：</p>
+<p>让AI扮演一个有多年经验的专家，告诉你这个领域最关键的是什么、新手常犯什么错误。</p>
+<p><strong>适用场景</strong>：</p>
+<ul>
+<li>你不确定自己的定位是否正确</li>
+<li>你想知道"如果我是专家，会怎么看这个问题"</li>
+<li>你想避免新手常犯的错误</li>
+</ul>
+<p><strong>Prompt模板</strong>：</p>
+<pre class="notranslate"><code class="notranslate">请扮演一个有10年[领域名称]经验的专业人士，从专家视角帮我分析这个问题。
+
+【我的背景】
+[描述你的专业背景、目前的工作/学习状态]
+
+【我的问题/困惑】
+[描述你遇到的具体问题]
+
+【请从专家视角回答】
+1. 根据你的经验，我这个问题最可能的根源是什么？
+2. 很多新手遇到类似问题时会犯什么错误？
+3. 如果你来处理这个问题，你会怎么做？
+4. 有没有我可能忽视的重要信息？
+
+请像在给我建议一样，用第一人称回答。
+</code></pre>
+<p><strong>示例对话</strong>：</p>
+<blockquote>
+<p><strong>用户</strong>：我是一名设计师，想学Figma做UI设计。我下载了Figma，看了很多教程，但感觉功能太多，不知道该从哪里开始。</p>
+</blockquote>
+<blockquote>
+<p><strong>AI（专家视角）</strong>：</p>
+<p>作为一个做了10年UI设计的人，我看到你面临的问题其实很典型。</p>
+<p><strong>问题根源</strong>：你陷入了"功能清单式学习"——把所有功能都看一遍，想记住每个功能。这是效率最低的方式。</p>
+<p><strong>新手常犯的错误</strong>：</p>
+<ol>
+<li>从菜单和功能开始学，而不是从实际页面开始学</li>
+<li>想记住所有快捷键，其实常用快捷键只有5-6个</li>
+<li>跳过组件和Auto Layout，这两个功能能解决80%的问题</li>
+</ol>
+<p><strong>我会怎么做</strong>：</p>
+<ul>
+<li>找一个你喜欢的设计作为参考</li>
+<li>用Figma复刻这个设计，只用最基础的功能</li>
+<li>遇到不会的再查，这样学的最精准</li>
+</ul>
+<p><strong>你可能忽视的</strong>：Figma的核心是"组件"和"约束"，理解了这两个，设计效率能提升10倍。</p>
+</blockquote>
+<h3>2.3 技巧C：清单核查</h3>
+<p><strong>核心思想</strong>：</p>
+<p>让AI列出某个领域的核心概念清单，标注哪些是必须先掌握的、哪些可以后学。</p>
+<p><strong>适用场景</strong>：</p>
+<ul>
+<li>你不确定学习一个领域需要掌握哪些内容</li>
+<li>你想知道哪些是核心、哪些是边缘</li>
+<li>你想确认自己的学习范围是否正确</li>
+</ul>
+<p><strong>Prompt模板</strong>：</p>
+<pre class="notranslate"><code class="notranslate">请帮我列出[领域名称]中最重要的20个概念，并标注：
+- 必须先掌握的（不掌握后续无法进行）
+- 进阶需要掌握的（有精力再学）
+- 可以后学的（需要时再查）
+
+【我的背景】
+[描述你的背景和当前水平]
+
+【我的学习目标】
+[描述你想达到的状态]
+
+请按学习顺序排列，并说明为什么这个顺序。
+</code></pre>
+<p><strong>示例对话</strong>：</p>
+<blockquote>
+<p><strong>用户</strong>：我想学数据分析用于工作，请列出最重要的20个概念并标注学习顺序。</p>
+</blockquote>
+<blockquote>
+<p><strong>AI回答</strong>：</p>
+<p>【数据分析 - 20个核心概念 + 学习顺序】</p>
+<p><strong>第一阶段：必须先掌握（理解后再学其他）</strong></p>
+<ol>
+<li><strong>业务指标定义</strong> - 不懂这个，其他都是空谈。知道"活跃用户"怎么定义、"转化率"怎么算</li>
+<li><strong>数据表基础</strong> - 知道数据存在哪里、表和字段是什么意思</li>
+<li><strong>维度与度量</strong> - 数据分析的基本语言，理解"什么是维度、什么是度量"</li>
+</ol>
+<p><strong>第二阶段：进阶需要（边做边学）</strong></p>
+<ol start="4">
+<li>SQL基础查询 - SELECT、WHERE、GROUP BY</li>
+<li>数据聚合与汇总 - COUNT、SUM、AVG等</li>
+<li>时间序列分析 - 环比、同比、趋势</li>
+<li>常见图表类型 - 折线图、柱状图、饼图的适用场景</li>
+<li>对比分析 - 和谁比、怎么比</li>
+</ol>
+<p><strong>第三阶段：可以后学（需要时再查）</strong></p>
+<ol start="9">
+<li>SQL高级查询 - JOIN、子查询</li>
+<li>数据清洗 - 缺失值、异常值处理</li>
+<li>高级可视化 - 组合图表、交互图表</li>
+<li>统计基础 - 方差、相关性</li>
+<li>Python基础 - 非必要，Excel/SQL足够</li>
+</ol>
+<p><strong>为什么这样排序</strong>：</p>
+<ul>
+<li>业务指标是"方向"，方向错了，后面都白学</li>
+<li>数据表基础是"地图"，不知道数据在哪，无法分析</li>
+<li>SQL/Python是"工具"，工具可以边做边学</li>
+</ul>
+</blockquote>
+<h3>2.4 技巧D：差距分析</h3>
+<p><strong>核心思想</strong>：</p>
+<p>描述你的背景和目标，让AI帮你分析差距在哪里、最需要补充什么。</p>
+<p><strong>适用场景</strong>：</p>
+<ul>
+<li>你知道自己的起点和终点，但不知道中间缺什么</li>
+<li>你想知道自己和目标之间差多少</li>
+<li>你想制定精准的学习计划</li>
+</ul>
+<p><strong>Prompt模板</strong>：</p>
+<pre class="notranslate"><code class="notranslate">我有一个学习/职业目标，请帮我分析我和目标之间的差距，以及我应该怎么弥补。
+
+【我的背景】
+- 我的专业/工作：
+- 我已有的技能：
+- 我目前的水平：
+
+【我的目标】
+- 我想达到的状态：
+- 我想能做什么：
+
+【请帮我分析】
+1. 我和目标之间最大的差距是什么？
+2. 为了达到目标，我最需要补充什么？
+3. 我应该按照什么顺序学习？
+4. 有没有我可能忽视的隐性要求？
+
+请给出具体、可操作的建议。
+</code></pre>
+<p><strong>示例对话</strong>：</p>
+<blockquote>
+<p><strong>用户</strong>：我是一名传统零售的产品经理，想转行做互联网产品经理，请分析我需要补什么。</p>
+</blockquote>
+<blockquote>
+<p><strong>AI回答</strong>：</p>
+<p>【差距分析与学习路径】</p>
+<p><strong>你的优势（可以迁移的）</strong></p>
+<ul>
+<li>产品基本功：需求分析、项目管理这些可以迁移</li>
+<li>业务理解：零售行业经验是有价值的</li>
+<li>沟通能力：这个是通用的</li>
+</ul>
+<p><strong>你的差距（需要补的）</strong></p>
+<ol>
+<li>
+<p><strong>互联网行业认知</strong>（优先级最高）</p>
+<ul>
+<li>你不了解互联网产品和用户</li>
+<li>建议：花1周了解互联网常见产品形态和用户行为</li>
+</ul>
+</li>
+<li>
+<p><strong>数据分析能力</strong>（中优先级）</p>
+<ul>
+<li>互联网产品经理每天都在和数据打交道</li>
+<li>你目前的Excel基础可以，但要补SQL和基本分析思维</li>
+</ul>
+</li>
+<li>
+<p><strong>互联网工作方式</strong>（中优先级）</p>
+<ul>
+<li>敏捷开发、A/B测试、增长黑客等概念</li>
+<li>建议：了解基本概念即可，深度在工作中学习</li>
+</ul>
+</li>
+<li>
+<p><strong>相关工具</strong>（低优先级）</p>
+<ul>
+<li>Axure/Figma做原型</li>
+<li>这是工具，边做边学最快</li>
+</ul>
+</li>
+</ol>
+<p><strong>学习顺序建议</strong></p>
+<ol>
+<li>先了解互联网行业（1周）</li>
+<li>再补数据分析基础（2-3周）</li>
+<li>再了解互联网工作方式（1周）</li>
+<li>工具在实际项目中学习</li>
+</ol>
+<p><strong>可能忽视的隐性要求</strong></p>
+<ul>
+<li>互联网行业变化快，学习能力比知识更重要</li>
+<li>作品集很重要：准备一个模拟项目，展示你的产品思维</li>
+</ul>
+</blockquote>
+<hr>
+<h2>第三部分：与AI对话的艺术</h2>
+<h3>3.1 追问：从"这个卡点"深入到"具体原因"</h3>
+<p>AI给出的回答往往是概括性的。要获得更深入的洞察，需要追问。</p>
+<p><strong>追问技巧</strong>：</p>
+<ol>
+<li>
+<p><strong>追问"为什么"</strong>：让AI解释判断依据</p>
+<ul>
+<li>"你说我卡在归因逻辑上，为什么这样认为？"</li>
+</ul>
+</li>
+<li>
+<p><strong>追问"具体是什么"</strong>：让AI给出更具体的描述</p>
+<ul>
+<li>"归因逻辑具体指什么？能举个例子吗？"</li>
+</ul>
+</li>
+<li>
+<p><strong>追问"怎么做"</strong>：让AI给出可操作的建议</p>
+<ul>
+<li>"如果我要解决归因问题，具体该怎么做？"</li>
+</ul>
+</li>
+</ol>
+<p><strong>示例</strong>：</p>
+<blockquote>
+<p><strong>用户</strong>：我是一名运营，学了两周Python但没效果。</p>
+<p><strong>AI</strong>：问题可能在于你学的是Python语法，而不是数据分析思维。</p>
+</blockquote>
+<blockquote>
+<p><strong>追问1</strong>：为什么这样认为？（追问原因）<br>
+<strong>AI</strong>：因为Python语法和数据分析师的日常工作之间有很大差距。数据分析师80%的时间在理解问题、提取数据，而不是写代码。</p>
+</blockquote>
+<blockquote>
+<p><strong>追问2</strong>：具体来说，我卡在哪里？（追问具体）<br>
+<strong>AI</strong>：你可能卡在两个地方：1）不知道该提取什么数据 2）不知道如何理解数据含义。Python只是工具，这两点没解决，工具用不上。</p>
+</blockquote>
+<blockquote>
+<p><strong>追问3</strong>：我应该怎么做？（追问做法）<br>
+<strong>AI</strong>：建议两步：1）先搞懂"活动效果怎么看"，问你的数据分析师或领导 2）带着问题学SQL，需要什么查什么。Python可以先放一放。</p>
+</blockquote>
+<h3>3.2 验证：让AI给出判断依据</h3>
+<p>AI的定位建议不一定完全准确，需要验证。</p>
+<p><strong>验证方法</strong>：</p>
+<ol>
+<li>
+<p><strong>要求AI提供判断依据</strong></p>
+<ul>
+<li>"你说我卡在X，请说明你的判断依据是什么？"</li>
+</ul>
+</li>
+<li>
+<p><strong>交叉验证</strong></p>
+<ul>
+<li>用其他渠道（搜索引擎、问同事）核实AI的说法</li>
+</ul>
+</li>
+<li>
+<p><strong>小范围尝试</strong></p>
+<ul>
+<li>根据AI建议，先做一个小尝试，验证是否有效</li>
+</ul>
+</li>
+<li>
+<p><strong>保持怀疑态度</strong></p>
+<ul>
+<li>AI不是权威，最终判断权在你自己</li>
+</ul>
+</li>
+</ol>
+<h3>3.3 交叉：让AI从不同角度分析同一个问题</h3>
+<p>同一个问题，从不同角度分析，可能得到不同的洞察。</p>
+<p><strong>交叉分析技巧</strong>：</p>
+<ol>
+<li>
+<p><strong>让AI扮演不同角色</strong></p>
+<ul>
+<li>"从产品经理的角度怎么看？"</li>
+<li>"从数据分析师的角度怎么看？"</li>
+<li>"从一个培训师的角度，给初学者什么建议？"</li>
+</ul>
+</li>
+<li>
+<p><strong>让AI分析"反面"</strong></p>
+<ul>
+<li>"如果我定位错了，可能错在哪里？"</li>
+<li>"最糟糕的情况是什么？"</li>
+</ul>
+</li>
+<li>
+<p><strong>让AI对比不同方案</strong></p>
+<ul>
+<li>"方案A和方案B各有什么优缺点？"</li>
+</ul>
+</li>
+</ol>
+<p><strong>示例</strong>：</p>
+<blockquote>
+<p><strong>用户</strong>：我是一名设计师，想转行做UX设计，我定位为"学Figma + 补用户研究知识"，这个定位对吗？</p>
+</blockquote>
+<blockquote>
+<p><strong>AI（设计师视角）</strong>：方向没问题，Figma是必备技能，用户研究也很重要。</p>
+</blockquote>
+<blockquote>
+<p><strong>AI（面试官视角）</strong>：但你需要补充一点：作品集。UX设计师找工作，作品集是第一关。你有Figma技能，但没有项目作品，面试会很吃亏。</p>
+</blockquote>
+<blockquote>
+<p><strong>AI（培训师视角）</strong>：建议调整顺序：先做一个完整的模拟项目，再学具体工具。这样你既有作品，又有技能。</p>
+</blockquote>
+<blockquote>
+<p><strong>综合建议</strong>：定位大方向是对的，但需要补充"准备作品集"这个环节，并且调整学习顺序——先做项目，再学工具。</p>
+</blockquote>
+<hr>
+<h2>第四部分：定位结果的验证</h2>
+<h3>4.1 为什么需要验证</h3>
+<p>AI给出的定位建议可能存在以下问题：</p>
+<ul>
+<li>AI对你的具体情况了解不够全面</li>
+<li>AI的知识可能过时或有偏差</li>
+<li>AI可能产生"幻觉"，给出不准确的建议</li>
+</ul>
+<p>因此，AI的定位结果需要验证后才能使用。</p>
+<h3>4.2 验证的三种方法</h3>
+<p><strong>方法一：快速尝试</strong></p>
+<p>根据AI的定位建议，进行一个小范围的尝试，验证是否有效。</p>
+<p><strong>示例</strong>：</p>
+<p>AI说："你可能卡在业务理解上，不是工具技能上。"</p>
+<p>验证方法：</p>
+<ul>
+<li>先花1-2天搞清楚"活动效果的业务指标"</li>
+<li>然后看看是否比继续学Python更有帮助</li>
+<li>如果有帮助，说明AI的判断是对的</li>
+</ul>
+<p><strong>方法二：反馈收集</strong></p>
+<p>和熟悉你情况的人讨论AI的定位建议，听取他们的反馈。</p>
+<p>可以问：</p>
+<ul>
+<li>"AI说的这个问题，你觉得对吗？"</li>
+<li>"你有没有看到我忽视的地方？"</li>
+<li>"如果是你，你会怎么定位？"</li>
+</ul>
+<p><strong>方法三：迭代优化</strong></p>
+<p>定位不是一次性完成的，而是需要迭代优化。</p>
+<ul>
+<li>先根据AI建议形成一个初步定位</li>
+<li>在学习过程中验证这个定位是否准确</li>
+<li>根据实际反馈不断调整</li>
+</ul>
+<h3>4.3 定位验证的信号</h3>
+<p><strong>定位准确的表现</strong>：</p>
+<ul>
+<li>学的知识马上能用上</li>
+<li>解决了卡点之后，后续内容变得清晰</li>
+<li>学习的方向感和紧迫感变强</li>
+</ul>
+<p><strong>定位不准确的表现</strong>：</p>
+<ul>
+<li>学了很久但进展缓慢</li>
+<li>感觉"学了很多，但不知道该用在哪里"</li>
+<li>卡点没有真正解决</li>
+</ul>
+<p>遇到这些信号，说明定位可能有问题，需要重新定位。</p>
+<hr>
+<h2>第五部分：案例演示——用ChatGPT进行定位分析</h2>
+<h3>5.1 定位任务背景</h3>
+<p>小王是一名市场专员，公司让他负责一个新媒体的运营，他想学习"内容营销"来提升工作效果。</p>
+<p>他不确定自己该学什么、从哪里开始，于是寻求AI辅助定位。</p>
+<h3>5.2 定位过程记录</h3>
+<p><strong>第一步：使用技巧A（问题反推）</strong></p>
+<blockquote>
+<p><strong>用户</strong>：我是一名市场专员，公司让我负责新媒体运营。我感觉内容营销很重要，想学习，但不知道从哪里开始。我尝试看了很多文章，越看越迷茫。请帮我分析我的问题可能在哪里。</p>
+</blockquote>
+<blockquote>
+<p><strong>AI分析</strong>：</p>
+<p>从你的描述看，你的问题可能不是"不知道学什么"，而是：</p>
+<ol>
+<li>
+<p><strong>没有具体场景</strong>：你说"内容营销很重要"，但没有说清楚你的具体任务是什么。是你要做内容规划？还是内容撰写？还是活动策划？</p>
+</li>
+<li>
+<p><strong>信息过载</strong>：看了很多文章，但没有形成系统认知。碎片化信息看多了，反而更迷茫。</p>
+</li>
+<li>
+<p><strong>可能缺少目标受众思维</strong>：内容营销的核心是"对谁说什么"。你可能没想清楚目标受众是谁。</p>
+</li>
+</ol>
+<p><strong>建议</strong>：先明确你的具体任务，再针对性地学习。</p>
+</blockquote>
+<p><strong>第二步：使用技巧B（专家视角）</strong></p>
+<blockquote>
+<p><strong>用户</strong>：具体来说，我的任务是每个月做一次品牌宣传活动，需要产出内容、策划活动、分析效果。请从专家视角告诉我，新手最可能在哪里卡住。</p>
+</blockquote>
+<blockquote>
+<p><strong>AI（专家视角）</strong>：</p>
+<p>作为有10年经验的市场营销人，我告诉你，新手最容易卡在这里：</p>
+<ol>
+<li>
+<p><strong>不知道"好内容"是什么</strong>：很多人以为内容营销就是写文章，结果写了一堆没人看的文章。好内容的前提是"知道读者想要什么"，而不是"你想说什么"。</p>
+</li>
+<li>
+<p><strong>没有数据思维</strong>：做完活动不知道怎么分析效果，或者分析了但不知道怎么看。好内容需要数据验证，不是凭感觉。</p>
+</li>
+<li>
+<p><strong>不懂平台规则</strong>：每个平台（抖音、微信、小红书）规则不同，照搬套路往往效果不好。</p>
+</li>
+</ol>
+<p><strong>你可能卡住的地方</strong>：</p>
+<ul>
+<li>内容定位（这篇文章是给谁看的？）</li>
+<li>效果分析（活动效果到底好不好？）</li>
+</ul>
+<p><strong>具体建议</strong>：</p>
+<ul>
+<li>先搞清楚你的目标用户是谁</li>
+<li>再搞清楚用什么平台</li>
+<li>最后学内容创作技巧</li>
+</ul>
+</blockquote>
+<p><strong>第三步：使用技巧C（清单核查）</strong></p>
+<blockquote>
+<p><strong>用户</strong>：请帮我列出内容营销最重要的20个概念，并告诉我学习顺序。</p>
+</blockquote>
+<blockquote>
+<p><strong>AI回答</strong>：</p>
+<p>【内容营销 - 20个核心概念】</p>
+<p><strong>第一阶段：必学（不懂后续无法进行）</strong></p>
+<ol>
+<li>目标受众定位 - 谁看你的内容？</li>
+<li>用户需求分析 - 用户想要什么？</li>
+<li>内容定位 - 你能提供什么独特价值？</li>
+<li>平台选择 - 在哪里发布？</li>
+</ol>
+<p><strong>第二阶段：核心技能</strong><br>
+5. 标题撰写<br>
+6. 内容结构<br>
+7. 行动号召（CTA）<br>
+8. 数据分析基础<br>
+9. 效果评估指标</p>
+<p><strong>第三阶段：进阶</strong><br>
+10. 内容矩阵<br>
+11. 内容日历<br>
+12. 用户画像<br>
+13. SEO基础<br>
+14. 社群运营</p>
+<p><strong>第四阶段：可以后学</strong><br>
+15. KOL合作<br>
+16. 付费推广<br>
+17. A/B测试<br>
+18. 内容自动化<br>
+19. 数据可视化<br>
+20. 营销自动化工具</p>
+</blockquote>
+<p><strong>第四步：综合定位结论</strong></p>
+<p>综合AI的分析，小王的定位结论是：</p>
+<pre class="notranslate"><code class="notranslate">【AI辅助定位结果】
+
+学习目标：提升内容营销能力，用于品牌宣传活动
+
+关键卡点：
+1. 目标受众定位（不知道活动内容给谁看）
+2. 内容定位（不知道什么样的内容有效）
+3. 效果分析（不知道如何评估活动效果）
+
+学习顺序：
+第一周：搞清楚目标受众是谁、他们关心什么
+第二周：了解不同平台的特点和内容形式
+第三周：学习内容创作的基本技巧
+第四周：学习活动效果的数据分析方法
+
+优先学习：
+- 用户调研方法（1-2天）
+- 平台特点对比（1天）
+- 爆款标题技巧（2天）
+- 数据分析基础（2天）
+
+可以后学：
+- 高级文案技巧
+- 付费推广
+- 自动化工具
+</code></pre>
+<h3>5.3 定位验证与调整</h3>
+<p>一周后，小王反馈：</p>
+<ul>
+<li>目标受众定位已经搞清楚，对工作帮助很大</li>
+<li>平台特点也了解了，但发现"内容定位"还是不够清晰</li>
+<li>效果分析部分发现SQL对他是瓶颈，需要补SQL基础</li>
+</ul>
+<p>根据反馈，调整了学习计划：</p>
+<ul>
+<li>继续深入"内容定位"的学习</li>
+<li>增加SQL基础学习的优先级</li>
+</ul>
+<hr>
+<h2>第六部分：本节总结</h2>
+<h3>核心要点回顾</h3>
+<ol>
+<li>
+<p><strong>AI辅助定位的价值</strong>：</p>
+<ul>
+<li>识别"不知道自己不知道"的盲区</li>
+<li>模拟专家视角，发现关键点</li>
+<li>提供多种定位方案的对比</li>
+</ul>
+</li>
+<li>
+<p><strong>定位Prompt的四种技巧</strong>：</p>
+<ul>
+<li>技巧A：问题反推——让AI分析卡点在哪里</li>
+<li>技巧B：专家视角——让AI扮演专家给出建议</li>
+<li>技巧C：清单核查——让AI列出核心概念和学习顺序</li>
+<li>技巧D：差距分析——让AI分析你和目标的差距</li>
+</ul>
+</li>
+<li>
+<p><strong>与AI对话的艺术</strong>：</p>
+<ul>
+<li>追问：深入到具体原因和做法</li>
+<li>验证：让AI说明判断依据，交叉验证</li>
+<li>交叉：从多个角度分析同一问题</li>
+</ul>
+</li>
+<li>
+<p><strong>定位结果的验证</strong>：</p>
+<ul>
+<li>快速尝试：用小范围行动验证</li>
+<li>反馈收集：和熟悉情况的人讨论</li>
+<li>迭代优化：定位是一个动态过程</li>
+</ul>
+</li>
+</ol>
+<h3>关键认知</h3>
+<blockquote>
+<p><strong>AI是定位的有力助手，但不是权威。</strong></p>
+<p>用AI发现问题、获得建议，但最终判断权在你自己。</p>
+<p>定位需要迭代——先有一个初步定位，然后在实践中验证和调整。</p>
+</blockquote>
+<hr>
+<h2>第七部分：课后练习与PDF配套</h2>
+<h3>练习一：使用PDF模板进行AI定位</h3>
+<p><strong>任务</strong>：</p>
+<p>使用配套PDF《AI定位对话模板与范例》，选择一个学习目标，完成一次完整的AI辅助定位。</p>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li>打开PDF模板</li>
+<li>使用四种技巧逐一进行AI对话</li>
+<li>综合AI的回答，形成定位结论</li>
+<li>记录对话过程和最终结论</li>
+</ol>
+<hr>
+<h3>练习二：追问与验证练习</h3>
+<p><strong>任务</strong>：</p>
+<p>用技巧A（问题反推）向AI提出一个问题，然后进行至少3轮追问，把问题分析到足够具体的程度。</p>
+<p><strong>记录清单</strong>：</p>
+<pre class="notranslate"><code class="notranslate">初始问题：
+追问1：
+追问2：
+追问3：
+最终结论：
+验证方式：
+</code></pre>
+<hr>
+<h3>练习三：定位验证练习</h3>
+<p><strong>任务</strong>：</p>
+<p>把你通过AI定位得出的结论，和熟悉你情况的人讨论（比如同事、朋友），收集他们的反馈，看看AI的定位和你自己的判断是否一致，有没有遗漏。</p>
+<p><strong>对比维度</strong>：</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>维度</th>
+<th>AI定位</th>
+<th>人工反馈</th>
+<th>是否一致</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>识别的卡点</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>学习顺序建议</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>需要补充的内容</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<hr>
+<h2>课前预告</h2>
+<p>下一节我们将进入RIDE循环的第三个关键步骤：</p>
+<p><strong>第8节：深钻(D)——窄而深地攻克一个知识点</strong></p>
+<p>你将学习如何在定位到关键卡点后，以"窄而深"的方式深入学习，形成真正可用的知识。</p>
+<p>准备好了吗？我们下一节见。</p>
+<hr>
+<p><em>本节课程时长：约20分钟</em><br>
+<em>配套资源：《AI定位对话模板与范例》PDF-03</em></p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://Ale2000one.github.io">浓缩铀</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("02/22/2026"!=""){
+    var startSite=new Date("02/22/2026");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+
+
+</html>
